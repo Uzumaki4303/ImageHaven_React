@@ -13,20 +13,19 @@ export default function Hero() {
   const [active, setActive] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
-  // const [currentPage, setCurrentPage] = useState();
+  const [currentPage, setCurrentPage] = useState();
 
   const MAX_PAGES = 20;
   const navigate = useNavigate();
 
   useEffect(() => {
+
     const fetchImages = async () => {
       setLoading(true);
       try {
         const response = await axios.get("https://api.pexels.com/v1/search", {
           headers: {
-            Authorization: `Bearer ${API_key}`
-            // bearer token is part of the OAuth 2.0 standard, which means that anyone who has this token can access the associated resources.
-            // This is a way to verify that the request is coming from an authenticated user.
+            Authorization: `${API_key}`,
           },
           params: {
             query: Input,
@@ -34,6 +33,7 @@ export default function Hero() {
             page: active,
           },
         });
+        
 
         setImages(response.data.photos);
         const totalResults = response.data.total_results;
