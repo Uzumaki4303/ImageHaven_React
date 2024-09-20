@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    font-family: 'Rubik' ,'sans-serif' ;
+}
+
+/* Add this to your global CSS file or in the same file using a <style> block */
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%); /* Start off-screen */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* End at the original position */
+      opacity: 1;
+    }
+  }
+  
+  .slide-in {
+    animation: slideInFromTop .5s ease-in forwards; /* Slide-in effect */
+  }
+
+
+  
