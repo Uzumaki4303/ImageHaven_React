@@ -20,7 +20,7 @@ export default function About() {
         About Us
       </h1>
       <div className="w-full flex items-center p-8 gap-16 md-max:flex-col md-max:p-2 md-max:mt-5">
-        <div className="w-3/5 h-min text-white font-bold flex flex-col justify-center items-center pb-16 md-max:w-fit md-max:p-0">
+        <div className="w-3/5 h-min  tracking-wider text-white font-bold flex flex-col justify-center items-center pb-16 md-max:w-fit md-max:p-0">
           <p className="mb-8">
             Welcome to our image gallery website, where discovering beautiful
             images is simple and enjoyable. We've designed our site with you in

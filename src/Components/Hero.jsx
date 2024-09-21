@@ -9,7 +9,7 @@ const API_key = import.meta.env.VITE_PEXELS_API_KEY ;
 
 export default function Hero() {
   const [images, setImages] = useState([]);
-  const [Input, setInput] = useState("flowers");
+  const [Input, setInput] = useState("Cherry blossoms");
   const [active, setActive] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -136,7 +136,7 @@ export default function Hero() {
           onClick={prev}
           className={`${
             active === 1 ? "invisible" : "visible"
-          } flex items-center justify-center`}
+          } flex items-center justify-center p-0`}
         >
           <ArrowLeftIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
@@ -150,8 +150,8 @@ export default function Hero() {
           variant="text"
           onClick={next}
           className={`${
-            active >= totalPages ? "invisible" : "visible"
-          } flex justify-center items-center`}
+            active >= totalPages ? "Invisible" : "visible"
+          } flex justify-center items-center p-0`}
         >
           <ArrowRightIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
