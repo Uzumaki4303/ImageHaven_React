@@ -16,7 +16,7 @@ function App() {
         <Navbar />
         <main className="flex h-auto justify-center mt-[68px] mb-5">
           <Routes>
-            <Route path="/" element={<Hero />} />
+            <Route path="ImageHaven_React/" element={<Hero />} />
             <Route path="/about" element={<About />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/image-viewer" element={<Selected_Image />} />{" "}
@@ -27,24 +27,7 @@ function App() {
       </div>
     </Router>
 
-    // <Feedback/>
   );
 }
 
 export default App;
-
-// use for pagination
-// useEffect(() => {
-//    Retrieve previous page number from location state
-//   const previousPage = location.state?.currentPage;
-
-//   if (typeof previousPage === "number" && previousPage > 0) {
-//     setActive(previousPage);
-//   } else {
-//     setActive(1);
-//   }
-// }, [location.state]);
-
-// fetch images using api
-
-// console.log(response.data);

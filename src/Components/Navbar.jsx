@@ -34,7 +34,7 @@ export default function Navbar() {
           >
             <ul className="flex justify-between items-center gap-8 text-xl md-max:flex-col sm-max:text-xl sm-max:w-full font-bold text-teal-500">
               <li className="hover:text-orange-400 border-b-2 border-transparent hover:border-orange-400 transition-colors duration-300 ease-in-out">
-                <NavLink to="/" onClick={() => setIsMenuOpen(false)}>
+                <NavLink to="ImageHaven_React/" onClick={() => setIsMenuOpen(false)}>
                   Home
                 </NavLink>
               </li>

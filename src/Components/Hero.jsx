@@ -136,7 +136,7 @@ export default function Hero() {
           onClick={prev}
           className={`${
             active === 1 ? "invisible" : "visible"
-          } flex items-center justify-center p-0`}
+          } flex items-center justify-center p-1 `}
         >
           <ArrowLeftIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
@@ -151,7 +151,7 @@ export default function Hero() {
           onClick={next}
           className={`${
             active >= totalPages ? "Invisible" : "visible"
-          } flex justify-center items-center p-0`}
+          } flex justify-center items-center p-1 `}
         >
           <ArrowRightIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
