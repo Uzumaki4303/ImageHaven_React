@@ -17,9 +17,9 @@ function App() {
         <main className="flex h-auto justify-center mt-[68px] mb-5">
           <Routes>
             <Route path="ImageHaven_React/" element={<Hero />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/feedback" element={<Feedback />} />
-            <Route path="/image-viewer" element={<Selected_Image />} />{" "}
+            <Route path="ImageHaven_React/about" element={<About />} />
+            <Route path="ImageHaven_React/feedback" element={<Feedback />} />
+            <Route path="ImageHaven_React/image-viewer" element={<Selected_Image />} />{" "}
             {/* Add this route if you have ImageViewer */}
           </Routes>
         </main>

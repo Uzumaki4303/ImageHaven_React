@@ -39,12 +39,12 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li className="hover:text-orange-400 border-b-2 border-transparent hover:border-orange-400 transition-colors duration-300 ease-in-out">
-                <NavLink to="/about" onClick={() => setIsMenuOpen(false)}>
+                <NavLink to="ImageHaven_React/about" onClick={() => setIsMenuOpen(false)}>
                   About
                 </NavLink>
               </li>
               <li className="hover:text-orange-400 border-b-2 border-transparent hover:border-orange-400 transition-colors duration-300 ease-in-out">
-                <NavLink to="/feedback" onClick={() => setIsMenuOpen(false)}>
+                <NavLink to="ImageHaven_React/feedback" onClick={() => setIsMenuOpen(false)}>
                   Feedback
                 </NavLink>
               </li>

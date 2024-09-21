@@ -114,7 +114,7 @@ export default function Hero() {
           {images.map((image) => (
             <div
               key={image.id}
-              className="flex justify-center p-1 border-4 border-transparent hover:border-[#e4dfdf] rounded-xl shadow-lg shadow-slate-800 cursor-pointer sm-max:my-5 "
+              className="flex justify-center p-1 border-4 border-transparent hover:border-[#e4dfdf] rounded-xl cursor-pointer sm-max:my-5 "
             >
               <img
                 src={image.src.medium}
@@ -136,7 +136,7 @@ export default function Hero() {
           onClick={prev}
           className={`${
             active === 1 ? "invisible" : "visible"
-          } flex items-center justify-center p-1 `}
+          } flex items-center justify-center p-1 w-8 h-8`}
         >
           <ArrowLeftIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
@@ -151,7 +151,7 @@ export default function Hero() {
           onClick={next}
           className={`${
             active >= totalPages ? "Invisible" : "visible"
-          } flex justify-center items-center p-1 `}
+          } flex justify-center items-center p-1 w-8 h-8`}
         >
           <ArrowRightIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
