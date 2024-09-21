@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { IconButton } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { search_icon, cross_icon, spinner } from "./Images";
 
-const API_key = import.meta.env.VITE_PEXELS_API_KEY ;
+const API_key = import.meta.env.VITE_PEXELS_API_KEY;
 
 export default function Hero() {
   const [images, setImages] = useState([]);
@@ -13,13 +13,11 @@ export default function Hero() {
   const [active, setActive] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [currentPage, setCurrentPage] = useState();
 
   const MAX_PAGES = 20;
   const navigate = useNavigate();
 
   useEffect(() => {
-
     const fetchImages = async () => {
       setLoading(true);
       try {
@@ -34,7 +32,6 @@ export default function Hero() {
           },
         });
         
-
         setImages(response.data.photos);
         const totalResults = response.data.total_results;
         const calculatedPages = Math.ceil(totalResults / 12);
@@ -71,13 +68,18 @@ export default function Hero() {
   };
 
   const handleImage = (event) => {
-    const imgUrl = event.currentTarget.dataset.highRes;
-    navigate("ImageHaven_React/image-viewer", {
-      state: {
-        imageUrl: imgUrl,
-        currentPage: active, // Pass current page number
-      },
-    });
+    const imgUrl = event.currentTarget.getAttribute("data-high-res"); // Access the data-original attribute
+    
+    if (imgUrl) {
+      navigate("/ImageHaven_React/image-viewer", {
+        state: {
+          imageUrl: imgUrl,
+          currentPage: active,
+        },
+      });
+    } else {
+      console.error("Image URL is undefined");
+    }
   };
 
   return (
@@ -91,7 +93,7 @@ export default function Hero() {
             value={Input}
             onChange={handleInput}
             placeholder="Enter your search term"
-            className="w-full bg-transparent outline-none rounded-lg text-white px-2 py-1 text-base cursor-pointer transition"
+            className="w-full bg-transparent outline-none rounded-lg text-white px-2 py-2 text-lg cursor-pointer transition"
             type="text"
           />
           {Input && (
@@ -102,13 +104,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Conditionally render spinner or images */}
       {loading ? (
-        <img
-          src={spinner}
-          alt="Loading..."
-          className="h-20 w-20 animate-spin mt-8"
-        />
+        <img src={spinner} alt="Loading..." className="h-20 w-20 animate-spin mt-8" />
       ) : (
         <div className="grid md-max:grid-cols-2 sm-max:block grid-cols-4 gap-4 mt-8 md:gap-8 ">
           {images.map((image) => (
@@ -134,9 +131,7 @@ export default function Hero() {
           size="sm"
           variant="text"
           onClick={prev}
-          className={`${
-            active === 1 ? "invisible" : "visible"
-          } flex items-center justify-center p-1 w-8 h-8`}
+          className={`${active === 1 ? "invisible" : "visible"} flex items-center justify-center p-1 w-8 h-8`}
         >
           <ArrowLeftIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
@@ -149,9 +144,7 @@ export default function Hero() {
           size="sm"
           variant="text"
           onClick={next}
-          className={`${
-            active >= totalPages ? "Invisible" : "visible"
-          } flex justify-center items-center p-1 w-8 h-8`}
+          className={`${active >= totalPages ? "invisible" : "visible"} flex justify-center items-center p-1 w-8 h-8`}
         >
           <ArrowRightIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
