@@ -51,7 +51,7 @@ export default function Feedback() {
     <div
       className={`${
         isLoaded ? "slide-in" : ""
-      } w-full flex justify-center items-center p-5 gap-24 md-max:gap-5 sm-max:flex-col sm-max:p-2 transition-all duration-100`}
+      } w-full flex justify-center items-center p-5 gap-24 md-max:gap-5 sm-max:flex-col sm-max:p-2 transition-all`}
     >
       <img src={person} alt="" className="md-max:h-[280px]" />
 

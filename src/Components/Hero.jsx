@@ -72,7 +72,7 @@ export default function Hero() {
 
   const handleImage = (event) => {
     const imgUrl = event.currentTarget.dataset.highRes;
-    navigate("/image-viewer", {
+    navigate("ImageHaven_React/image-viewer", {
       state: {
         imageUrl: imgUrl,
         currentPage: active, // Pass current page number

@@ -34,7 +34,7 @@ export default function Selected_Image() {
   };
 
   const handleBack = () => {
-    navigate("/", { state: { currentPage } }); // Pass the currentPage when navigating back
+    navigate("ImageHaven_React/", { state: { currentPage } }); // Pass the currentPage when navigating back
   };
 
   return (

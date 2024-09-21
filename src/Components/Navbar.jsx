@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { cross_icon, cameraLogo, hamburger } from "./Images";
-// export const cameraLogo = "../assets/cameraLogo.png";
-// export const cross_icon = "../assets/Cross_icon.svg";
-// export const hamburger = "../assets/hamburger_icon.svg";
-
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

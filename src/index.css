@@ -21,7 +21,7 @@
   }
   
   .slide-in {
-    animation: slideInFromTop .5s ease-in forwards; /* Slide-in effect */
+    animation: slideInFromTop .3s ease-in-out forwards; /* Slide-in effect */
   }
 
 
