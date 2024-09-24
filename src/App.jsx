@@ -6,12 +6,24 @@ import { spinner } from "./Components/Images";
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
+  // Simulate an async loading function
+  const loadWebsiteResources = async () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 5000); 
+    });
+  };
 
-    return () => clearTimeout(timer); // Cleanup the timer
+  useEffect(() => {
+    const loadApp = async () => {
+      await loadWebsiteResources(); // Await resource loading
+      setLoading(false); // Stop loading after resources are loaded
+    };
+
+    loadApp(); // Call the async function
+
+    return () => {}; // Optional cleanup
   }, []);
 
   return (

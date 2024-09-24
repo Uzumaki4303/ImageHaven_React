@@ -34,7 +34,7 @@ export default function Hero() {
         
         setImages(response.data.photos);
         const totalResults = response.data.total_results;
-        const calculatedPages = Math.ceil(totalResults / 12);
+        const calculatedPages = Math.ceil(totalResults / 16);
         setTotalPages(Math.min(calculatedPages, MAX_PAGES));
       } catch (error) {
         console.error("Error fetching images from Pexels:", error);
@@ -136,7 +136,7 @@ export default function Hero() {
           <ArrowLeftIcon strokeWidth={2} stroke="white" className="h-6 w-6" />
         </IconButton>
 
-        <div className="font-normal text-white">
+        <div className="font-normal text-xl text-white">
           Page <strong>{active}</strong> of <strong>{totalPages}</strong>
         </div>
 

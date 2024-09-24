@@ -14,13 +14,13 @@ export default function About() {
     <div
       className={`${
         isLoaded ? "slide-in" : ""
-      } w-full flex flex-col justify-center items-center group transition-all duration-100 overflow-auto`}
+      } w-full flex flex-col justify-center items-center group transition-all duration-100 overflow-auto mt-10`}
     >
       <h1 className="text-teal-500 font-bold text-3xl border-b-4 border-transparent group-hover:border-b-red-500 border-0 rounded-b-lg mt-5 pb-1">
         About Us
       </h1>
       <div className="w-full flex items-center p-8 gap-16 md-max:flex-col md-max:p-2 md-max:mt-5">
-        <div className="w-3/5 h-min  tracking-wider text-white font-bold flex flex-col justify-center items-center pb-16 md-max:w-fit md-max:p-0">
+        <div className="w-3/5 h-min text-xl tracking-wider text-white font-bold flex flex-col justify-center items-center pb-16 md-max:w-fit md-max:p-0">
           <p className="mb-8">
             Welcome to our image gallery website, where discovering beautiful
             images is simple and enjoyable. We've designed our site with you in

@@ -49,7 +49,6 @@ export default function Selected_Image() {
           src={imageUrl}
           alt="Selected"
           className={`w-full rounded-md ${loading ? "hidden" : "block"}`} // Hide image until it is loaded
-          // loading="lazy"
           onLoad={() => setLoading(false)} // Set loading to false when image loads
         />
 

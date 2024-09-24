@@ -7,7 +7,7 @@ const GITHUB_URL = import.meta.env.VITE_GITHUB_URL
 export default function Footer() {
   return (
     <div className="bg-gray-500/10 text-center p-5 h-auto">
-      <span className="text-teal-500 font-bold mb-4 border-b-2 border-transparent border-0 border-b-teal-500">Connect with me</span>
+      <span className="text-teal-500 text-xl font-bold mb-4 border-b-2 border-transparent border-0 border-b-teal-500">Connect with me</span>
       
       <div className="flex justify-center gap-8 pt-5">
         {/* LinkedIn Link */}
